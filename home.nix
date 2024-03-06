@@ -9,10 +9,16 @@
 
   home.packages = with pkgs; [
     
+    # editors
     vim
+    lunarvim
+
+    # dev
     rustup
     bat
     python3
+
+    # cli
     zip
     unzip
     eza
