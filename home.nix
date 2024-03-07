@@ -14,6 +14,7 @@
     lunarvim
 
     # dev
+    gcc
     rustup
     python3
     nodejs
@@ -22,6 +23,7 @@
 
     # cli
     bat
+    delta
     zip
     unzip
     eza
@@ -45,7 +47,19 @@
     # signing.signByDefault = true;
 
     extraConfig = {
-      core = { whitespace = "trailing-space,space-before-tab"; };
+      core = { 
+        whitespace = "trailing-space,space-before-tab"; 
+        pager = "delta";
+      };
+      interactive = {
+        diffFilter = "delta --color-only";
+      };
+      merge = {
+        conflictstyle = "diff3";
+      };
+      diff = {
+        colorMoved = "default";
+      };
       color = { ui = "auto"; };
       github = { user = "Degra02"; };
      };
