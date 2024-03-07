@@ -15,10 +15,13 @@
 
     # dev
     rustup
-    bat
     python3
+    nodejs
+    nil
+
 
     # cli
+    bat
     zip
     unzip
     eza
