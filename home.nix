@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports = [ ./shells/zsh.nix ./editors/nvim.nix  ];
+  imports = [ ./shells/zsh.nix ./editors/nvim.nix ./wm/hyprland.nix ];
   home.username = "degra";
   home.homeDirectory = "/home/degra";
 
@@ -23,7 +23,9 @@
     unzip
     eza
     fzf
+    neofetch
 
+    # various
     gnupg
     pinentry
 
