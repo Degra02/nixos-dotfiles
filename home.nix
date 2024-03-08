@@ -1,7 +1,13 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports = [ ./shells/zsh.nix ./editors/nvim.nix ./wm/hyprland.nix ./misc/waybar.nix];
+  imports = [ 
+    ./shells/zsh.nix 
+    ./editors/nvim.nix 
+    ./wm/hyprland.nix 
+    ./misc/waybar.nix
+    ./misc/alacritty.nix
+  ];
   home.username = "degra";
   home.homeDirectory = "/home/degra";
 

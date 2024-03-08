@@ -13,6 +13,7 @@
           "$mod, F, exec, firefox"
           ", Print, exec, grimblast copy area"
           "$mod, D, exec, wofi --show drun --allow-images"
+          "$mod, Return, exec, alacritty"
         ]
         ++ (
           # workspaces
