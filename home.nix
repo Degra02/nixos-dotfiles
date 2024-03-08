@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports = [ ./shells/zsh.nix ./editors/nvim.nix ./wm/hyprland.nix ];
+  imports = [ ./shells/zsh.nix ./editors/nvim.nix ./wm/hyprland.nix ./misc/waybar.nix];
   home.username = "degra";
   home.homeDirectory = "/home/degra";
 
@@ -34,10 +34,13 @@
     gnupg
     pinentry
 
+    nerd-font-patcher
+    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
   programs.gh.enable = true;
 
+  fonts.fontconfig.enable = true;
   programs.git = {
     enable = true;
     package = pkgs.gitAndTools.gitFull;
